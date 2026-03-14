@@ -25,15 +25,15 @@
 
     private string GetCssClasses()
     {
-        var baseClasses = "relative flex items-center justify-center p-1 text-center border border-gray-300 rounded transition-all duration-150 select-none min-h-[60px] text-xs leading-tight";
+        var baseClasses = "relative flex items-center justify-center p-1 text-center border border-gray-300 rounded transition-all duration-150 select-none min-h-[60px] text-xs leading-tight font-bold text-shadow-sm stroke-bold";
 
         var stateClasses = Square.IsMarked
             ? IsWinning
                 ? "bg-amber-200 border-amber-400 text-amber-900"
                 : "bg-marked border-marked-border text-green-800"
-            : "bg-white text-gray-700 active:bg-gray-100";
+            : "bg-white text-gray-900 active:bg-gray-100";
 
-        var freeSpaceClasses = Square.IsFreeSpace ? "font-bold text-sm" : "";
+        var freeSpaceClasses = Square.IsFreeSpace ? "font-bold text-sm text-burgundy" : "";
 
         return $"{baseClasses} {stateClasses} {freeSpaceClasses}";
     }

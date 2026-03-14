@@ -6,8 +6,15 @@ body,
 }
 
 body {
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family: Impact, "Arial Black", sans-serif;
     -webkit-tap-highlight-color: transparent;
+    background: linear-gradient(45deg, #1a1a1a 25%, transparent 25%, transparent 75%, #1a1a1a 75%, #1a1a1a),
+                linear-gradient(45deg, #1a1a1a 25%, transparent 25%, transparent 75%, #1a1a1a 75%, #1a1a1a);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+    background-color: #2a2a2a;
+    letter-spacing: 0.05em;
+    color: #f5f5f0;
 }
 
 /* Tailwind-like utility classes */
@@ -50,26 +57,32 @@ body {
 .mb-8 { margin-bottom: 2rem; }
 .mx-auto { margin-left: auto; margin-right: auto; }
 
-.bg-white { background-color: #ffffff; }
-.bg-gray-50 { background-color: #f9fafb; }
-.bg-gray-100 { background-color: #f3f4f6; }
-.bg-amber-100 { background-color: #fef3c7; }
-.bg-amber-200 { background-color: #fde68a; }
-.bg-accent { background-color: #2563eb; }
-.bg-marked { background-color: #dcfce7; }
-.bg-black\/50 { background-color: rgba(0, 0, 0, 0.5); }
+.bg-white { background-color: #f5f5f0; }
+.bg-gray-50 { background-color: #2a2a2a; }
+.bg-gray-100 { background-color: #1a1a1a; }
+.bg-amber-100 { background-color: #8B1538; }
+.bg-amber-200 { background-color: #ff00ff; }
+.bg-accent { background-color: #0A8B8F; }
+.bg-marked { background-color: #CCFF00; }
+.bg-black\/50 { background-color: rgba(0, 0, 0, 0.75); }
+.bg-burgundy { background-color: #8B1538; }
+.bg-teal { background-color: #0A8B8F; }
+.bg-yellow { background-color: #CCFF00; }
 
-.text-white { color: #ffffff; }
-.text-gray-500 { color: #6b7280; }
-.text-gray-600 { color: #4b5563; }
-.text-gray-700 { color: #374151; }
-.text-gray-800 { color: #1f2937; }
-.text-gray-900 { color: #111827; }
-.text-green-600 { color: #16a34a; }
-.text-green-800 { color: #166534; }
-.text-amber-500 { color: #f59e0b; }
-.text-amber-800 { color: #92400e; }
-.text-amber-900 { color: #78350f; }
+.text-white { color: #f5f5f0; }
+.text-gray-500 { color: #b0b0a0; }
+.text-gray-600 { color: #a0a090; }
+.text-gray-700 { color: #909080; }
+.text-gray-800 { color: #808070; }
+.text-gray-900 { color: #f5f5f0; }
+.text-green-600 { color: #CCFF00; }
+.text-green-800 { color: #ffff00; }
+.text-amber-500 { color: #ff00ff; }
+.text-amber-800 { color: #ff0080; }
+.text-amber-900 { color: #ff1493; }
+.text-burgundy { color: #8B1538; }
+.text-teal { color: #0A8B8F; }
+.text-yellow { color: #CCFF00; }
 
 .text-xs { font-size: 0.75rem; line-height: 1rem; }
 .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
@@ -84,19 +97,31 @@ body {
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 
-.border { border-width: 1px; }
-.border-b { border-bottom-width: 1px; }
-.border-gray-200 { border-color: #e5e7eb; }
-.border-gray-300 { border-color: #d1d5db; }
-.border-amber-400 { border-color: #fbbf24; }
-.border-marked-border { border-color: #22c55e; }
+.border { border-width: 3px; }
+.border-b { border-bottom-width: 3px; }
+.border-gray-200 { border-color: #0A8B8F; }
+.border-gray-300 { border-color: #8B1538; }
+.border-amber-400 { border-color: #CCFF00; }
+.border-marked-border { border-color: #0A8B8F; }
+.border-burgundy { border-color: #8B1538; }
+.border-teal { border-color: #0A8B8F; }
+.border-yellow { border-color: #CCFF00; }
 
-.rounded { border-radius: 0.25rem; }
-.rounded-lg { border-radius: 0.5rem; }
-.rounded-xl { border-radius: 0.75rem; }
+.rounded { border-radius: 0px; }
+.rounded-lg { border-radius: 2px; }
+.rounded-xl { border-radius: 4px; }
 
-.shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
-.shadow-xl { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+.shadow-sm { box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6), inset 0 -2px 0 rgba(0,0,0,0.8); }
+.shadow-xl { box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8), inset 0 -4px 0 rgba(0,0,0,0.9); }
+.shadow-bold { box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.8); }
+.text-shadow-sm { text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8), -1px -1px 0 rgba(255, 255, 255, 0.2); }
+.text-shadow-lg { text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.9), 0 0 10px rgba(255, 0, 255, 0.5); }
+.text-shadow-glow { text-shadow: 0 0 10px rgba(204, 255, 0, 0.8), 0 0 20px rgba(10, 139, 143, 0.6); }
+
+.stroke-bold { 
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.8);
+    text-stroke: 1px rgba(0, 0, 0, 0.8);
+}
 
 .space-y-2 > * + * { margin-top: 0.5rem; }
 
@@ -113,18 +138,36 @@ body {
 
 .select-none { user-select: none; }
 
-.transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
-.transition-colors { transition-property: color, background-color, border-color; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
-.duration-150 { transition-duration: 150ms; }
+.transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 75ms; }
+.transition-colors { transition-property: color, background-color, border-color; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 75ms; }
+.duration-150 { transition-duration: 75ms; }
+.duration-fast { transition-duration: 75ms; }
 
 button:active .active\:bg-gray-100 { background-color: #f3f4f6; }
 button:active .active\:bg-accent-light { background-color: #3b82f6; }
 
 button {
     cursor: pointer;
-    border: none;
-    background: none;
+    border: 3px solid #8B1538;
+    background: linear-gradient(135deg, #0A8B8F, #068080);
     font: inherit;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.8), 4px 4px 0 rgba(0, 0, 0, 0.8);
+    position: relative;
+    transform: translateY(0);
+    transition: all 75ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover:not(:disabled) {
+    background: linear-gradient(135deg, #0A8B8F, #069090);
+    transform: translateY(-2px);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.8), 6px 6px 0 rgba(0, 0, 0, 0.9);
+}
+
+button:active:not(:disabled) {
+    transform: translateY(2px);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.8), 2px 2px 0 rgba(0, 0, 0, 0.6);
 }
 
 button:disabled {
